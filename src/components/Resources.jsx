@@ -11,21 +11,32 @@ export default function Resources({resources}) {
     
     const katigori = resources.filter((resource) => resource.category === slug )
     console.log("resuset sulg", katigori)
+
+    // const overskrift = katigori.filter((resource) => resource.category === 1) 
+
+    //     //  (e) => {
+        
+    // //     
+    // // }
+
+    // // console.log(overskrift.katigori)
+    // console.log("overskrifen", overskrift)
+    
     return(
         <section id="info">
-
-            <div>
-            <h2> {category.name} </h2>
-                {katigori.map((resource, index) => (
+            {katigori.map((resource, index) => (
+             
+                <h2 key={index}>{resource.category}</h2>
+                ))}
+                    <ul>       
+                    {katigori.map((resource, index) => ( 
                     <PagTitle
                     resource={resource}
-                    
                     key={`FCT_${index}`}
-                    
-                    />
-                ))}
-            </div>
+                    />))} 
+                    </ul>
 
+                    
         </section>
     )
 }

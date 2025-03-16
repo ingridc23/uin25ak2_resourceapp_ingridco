@@ -1,9 +1,10 @@
-export default function PagTitle({resources}) {
+export default function PagTitle({resource, }) {
 
-
+    
     return(
-        <>
-        <a href="https://www.w3schools.com/css/">SEfgh</a>
-        </>
+
+        <li>
+        <a className="linkerliste" href={resource.url}>{resource.title}</a></li>
+
     )
 }

@@ -28,14 +28,15 @@ export default function Nav() {
             slug: "headless-cms"
         }
     ]
-
+ 
 
     return(
         <nav>
-            <ul >
+            {}
+            <ul>
                 {categories.map((category) => (
                     <li key={category.id}>
-                        <Link to={`/category/${category.slug}`} >{category.name}</Link>
+                        <Link to={`/category/${category.slug}`} className="valg" >{category.name}</Link>
                     </li>
                 ))}
             </ul>
